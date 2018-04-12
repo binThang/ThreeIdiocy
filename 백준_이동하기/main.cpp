@@ -33,7 +33,7 @@ int main()
 			int leftValue = (0 <= (j - 1) && (j - 1) < m) ? maximum[i][j - 1] : 0;
 			int leftupperValue = ((0 <= (i - 1) && (i - 1) < n) && (0 <= (j - 1) && (j - 1) < m)) ? maximum[i - 1][j - 1] : 0;
 
-			maximum[i][j] = _Max_value(upperValue, _Max_value(leftValue, leftupperValue)) + ary[i][j];
+			maximum[i][j] = fmax(upperValue, fmax(leftValue, leftupperValue)) + ary[i][j];
 		}
 	}
 
